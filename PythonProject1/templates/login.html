@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h1>Login</h1>
+
+{% if error %}
+    <div style="color:red; margin-bottom:15px; font-weight:bold;">{{ error }}</div>
+{% endif %}
+
+<form method="POST" action="/login">
+    <input type="hidden" name="next" value="{{ request.args.get('next', '') }}">
+    <label>Username</label>
+    <input type="text" name="username" required>
+
+    <br><br>
+
+    <label>Password</label>
+
+    <div style="position:relative;width:300px;">
+        <input type="password" id="password" name="password" required style=" width:100%;padding-right:40px;">
+
+        <span onclick="togglePassword()" style="position:absolute; right:10px; top:8px; cursor:pointer; user-select:none;">
+            👁
+        </span>
+    </div>
+
+    <br><br>
+
+    <button type="submit"> Login</button>
+</form>
+
+<script>
+function togglePassword() {
+    const password = document.getElementById("password");
+    if (password.type === "password")
+        password.type = "text";
+    else
+        password.type = "password";
+}
+</script>
+
+{% endblock %}

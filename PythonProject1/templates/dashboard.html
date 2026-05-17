@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h1>Your Dashboard</h1>
+
+<form method="POST">
+
+    <input type="text" name="book" placeholder="Book Name" required>
+
+    <input type="number" name="rating" min="1" max="10" required>
+
+    <textarea name="review" placeholder="Write review"></textarea>
+
+    <select name="privacy">
+        <option value="public">Public</option>
+        <option value="private">Private</option>
+    </select>
+
+    <button type="submit">Post Review</button>
+
+</form>
+
+<h2>Your Reviews</h2>
+
+{% for review in reviews %}
+
+<div class="card">
+
+    <h3>{{ review.book }}</h3>
+
+    <p>Rating: {{ review.rating }}/10</p>
+
+    <p>{{ review.display_review }}</p>
+
+    <p>Status: {{ review.privacy }}</p>
+
+</div>
+
+{% endfor %}
+
+{% endblock %}

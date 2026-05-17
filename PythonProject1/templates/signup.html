@@ -1,0 +1,82 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h1>Sign Up</h1>
+
+{% if error %}
+    <div style="color:red; font-weight:bold; margin-bottom:10px;">
+        {{ error }}
+    </div>
+{% endif %}
+
+<form method="POST" action="/signup">
+    <input type="hidden" name="next" value="{{ request.args.get('next', '') }}">
+    <label>Username</label>
+    <input type="text" id="username" name="username" required>
+    <p id="status" style="font-weight:bold;"></p>
+    <label>Password</label>
+
+    <div style="  position:relative;     width:300px;">
+        <input type="password" id="password" name="password" required style="width:100%;padding-right:40px;">
+        <span onclick="togglePassword()" style=" position:absolute;right:10px; top:8px;cursor:pointer; user-select:none;  "></span>
+    </div>
+
+    <br><br>
+
+    <button type="submit">Create Account</button>
+
+</form>
+
+<script>
+
+function togglePassword() {
+    const input = document.getElementById("password");
+
+    if (input.type === "password")
+        input.type = "text";
+     else
+        input.type = "password";
+}
+
+
+const input = document.getElementById("username");
+
+const status = document.getElementById("status");
+
+let timeout = null;
+
+input.addEventListener("input", function () {
+    clearTimeout(timeout);
+
+    timeout = setTimeout(() => {
+        const username = input.value;
+
+        if (username.length < 3) {
+            status.innerText = "";
+            return;
+        }
+
+        fetch(`/check_username?username=${username}`)
+            .then(res => res.json())
+            .then(data => {
+                if (data.exists) {
+                    status.innerText =
+                        "❌ Username already taken";
+                    status.style.color = "red";
+                }
+
+                else {
+                    status.innerText =
+                        "✔ Username available";
+                    status.style.color = "green";
+                }
+
+            });
+
+    }, 300);
+
+});
+
+</script>
+
+{% endblock %}

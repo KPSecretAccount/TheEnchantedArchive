@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>{{ name }}</h1>
+
+<h3>Average rating: {{ avg }}/5</h3>
+
+<h2>Write a Review</h2>
+
+<form method="POST">
+    <label>Rating (1–5)</label>
+    <input type="number" name="rating" min="1" max="5" required>
+    <textarea name="review" placeholder="Write review"></textarea>
+    <select name="privacy">
+        <option value="public">Public (anyone can see)</option>
+        {% if session.user %}
+            <option value="private">Private (encrypted)</option>
+        {% else %}
+            <option disabled>L<p>
+    <a href="/login?next=/book/{{ name }}">Login to write a private review</a>
+</p></option>
+        {% endif %}
+
+    </select>
+
+    <button type="submit">Post</button>
+</form>
+
+<h2>Reviews</h2>
+
+{% for r in reviews %}
+
+<div class="card">
+    <p><b>{{ r.user }}</b></p>
+    <p>Rating: {{ r.rating }}/5</p>
+    <p>{{ r.review }}</p>
+</div>
+
+{% else %}
+
+<p>N/A</p>
+
+{% endfor %}
+
+{% endblock %}

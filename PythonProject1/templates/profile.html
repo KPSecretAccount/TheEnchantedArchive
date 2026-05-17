@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h1>{{ username }}'s Profile</h1>
+
+{% if reviews %}
+    {% for r in reviews %}
+        <div style="border:1px solid #ccc; padding:15px; margin-bottom:15px; border-radius:10px;">
+            <h2>
+                <a href="/book/{{ r.book }}">{{ r.book }}</a>
+            </h2>
+
+            <p>⭐ {{ r.rating }}/5</p>
+            <p>{{ r.review }}</p>
+
+            {% if r.privacy == "private" %}
+                <p style="color:purple;">🔒 Private Review</p>
+            {% else %}
+                <p style="color:green;">🌎 Public Review</p>
+            {% endif %}
+        </div>
+
+    {% endfor %}
+{% else %}
+    <p>You haven't reviewed any books yet.</p>
+
+{% endif %}
+{% endblock %}

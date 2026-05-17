@@ -1,0 +1,26 @@
+[
+  {
+    "username": "kripa",
+    "password": "scrypt:32768:8:1$XAdIGaXBL81Buyng$f04092ae7988f04d3aee69e28e6e4c2f23a92b685e478144ef5c513622f9bcb3a674a99a51ed782adc4f61865a45a853093edd16ef9e8b194497d6b1da16582d"
+  },
+  {
+    "username": "rl",
+    "password": "scrypt:32768:8:1$p9eyzW2Vb16qP4J3$debdedc6f111288381dad937f7639ba7b6b5c49bd2014282b5218be53c88bd839ca3d35797fe469efbcddf196e81271223e41626b03f2ad84f4944baff997ce3"
+  },
+  {
+    "username": "k",
+    "password": "scrypt:32768:8:1$TQVVXFKaFlMM9fwj$2637bc601e48fe6d2df4ca86810536f33e1176f81f59836206e14782ef301b45844b9908ef08c855d5e7103369aa4eaf8a6b89a29fa780457618066a628f0ffc"
+  },
+  {
+    "username": "ke",
+    "password": "scrypt:32768:8:1$PQO0OBLR9R25PAw9$83a93d1c88fa9085e4797c71a5b7d927ff361c16b57fdcdbe1d52e2a2ca9682a957b88f3882f31e297616b7f79cd6b06653c299a47696a6923b41e5c135c29ed"
+  },
+  {
+    "username": "4",
+    "password": "scrypt:32768:8:1$hBFqX2mvSHBStscj$f6a88f767aba1cc99c7384451ae43fe97aabf6d7b1d72db1c869698776eae5688871e81589b1a9422f0ca5ce824c624632e81a7b8ef6e69e332298e6c1d5cc78"
+  },
+  {
+    "username": "rk",
+    "password": "scrypt:32768:8:1$mrOlZ0j3xPvf2j4R$4492c5b9a99880d39934a34a64723699e08b073070fb9ef384d39bbafc8ee7d440cf2db3f7fa870be55e74f7906fe28b4284ac734ac37831e8f6100c9f662c95"
+  }
+]

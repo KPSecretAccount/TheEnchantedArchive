@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h1>Book Reviews</h1>
+
+{% for r in reviews %}
+
+<div class="card">
+    <h2>{{ r.book }}</h2>
+    <p>User: {{ r.user }}</p>
+    <p>Rating: {{ r.rating }}/5</p>
+    <p>{{ r.review }}</p>
+
+    {% if avg_ratings[r.book] %}
+        <p><b>Average rating:</b> {{ avg_ratings[r.book] }}/5</p>
+    {% endif %}
+</div>
+
+{% endfor %}
+{% endblock %}

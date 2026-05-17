@@ -1,0 +1,79 @@
+[
+  {
+    "user": "Guest",
+    "book": "Harry Potter and the Philosopher's Stone",
+    "rating": 1,
+    "review": "good book",
+    "privacy": "public"
+  },
+  {
+    "user": "Guest",
+    "book": "Harry Potter and the Philosopher's Stone",
+    "rating": 2,
+    "review": "gAAAAABqB4AAf1wrdku9Txc3sYL0SQaLV9mdurM4VNDKqH3Y0RuTxzYZLaasGsnJrsUcSpgJUxpwKl7_NvlBxAZNKCxN93W3MQ==",
+    "privacy": "private"
+  },
+  {
+    "user": "Anonymous",
+    "book": "Harry Potter and the Philosopher's Stone",
+    "rating": 1,
+    "review": "okat",
+    "privacy": "public"
+  },
+  {
+    "user": "rl",
+    "book": "Harry Potter and the Philosopher's Stone",
+    "rating": 1,
+    "review": "gAAAAABqB4OecRWT3ze_gDDx-t9E7Le9vankzjqZlWEC_Ut8yho06iZdBKTUWAVM76TSUUe_--O9x0LXfEBUKsBHtrsVVHb63A==",
+    "privacy": "private"
+  },
+  {
+    "user": "Anonymous",
+    "book": "The Mistake",
+    "rating": 3,
+    "review": "lsl",
+    "privacy": "public"
+  },
+  {
+    "user": "Anonymous",
+    "book": "Harry Potter and the Chamber of Secrets",
+    "rating": 5,
+    "review": "nj",
+    "privacy": "public"
+  },
+  {
+    "user": "k",
+    "book": "Harry Potter and the Philosopher's Stone",
+    "rating": 5,
+    "review": "gAAAAABqB9OtHbeskD3tPxKpiXyrMgjzBykDGETL5NgZdKB6K4UH4bwdd4JyNYvHq1fe07jXCBSJ9NwoDsd-rhfXhaO8_sXtmA==",
+    "privacy": "private"
+  },
+  {
+    "user": "ke",
+    "book": "The Giver",
+    "rating": 3,
+    "review": "j3j3",
+    "privacy": "public"
+  },
+  {
+    "user": "rl",
+    "book": "Dealing with Dragons",
+    "rating": 3,
+    "review": "3",
+    "privacy": "public"
+  },
+  {
+    "user": "rl",
+    "book": "The Mistake",
+    "rating": 3,
+    "review": "gAAAAABqCccv0A9L--P57Y7mCgGxkz9h7W47i5fZNfxmcW6SCcPTRiJxz9MdJz2cXefnscs-cZ2E3snpKvOEF4r_ge9Ob8NeRw==",
+    "privacy": "private"
+  },
+  {
+    "user": "Anonymous",
+    "book": "The Hate U Give",
+    "rating": 4,
+    "review": "jf",
+    "privacy": "public"
+  }
+]
